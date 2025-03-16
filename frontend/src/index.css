@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.audio-recorder {
+  @apply p-6 bg-gray-900 text-white shadow-lg rounded-lg max-w-md mx-auto text-center border border-gray-700;
+}
+
+.record-btn {
+  @apply flex items-center justify-center px-6 py-3 rounded-lg text-white font-semibold transition duration-300 bg-green-500 hover:bg-green-600 w-full;
+}
+
+.recording {
+  @apply bg-red-500 hover:bg-red-600;
+}
+
+.audio-preview {
+  @apply mt-4 w-full rounded-lg shadow;
+}
+
+body {
+  background-color: #e5e7eb; /* Equivalent to Tailwind's bg-gray-200 */
+  min-height: 100vh;
+  margin: 0;
+}
