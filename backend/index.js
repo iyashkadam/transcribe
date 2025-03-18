@@ -10,7 +10,12 @@ const transcriptionRoutes = require("./routes/transcription"); // ✅ Import tra
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://transcribe-1-hpns.onrender.com', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+  credentials: true, 
+}));
+
 app.use(express.json());
 
 // ✅ Use the upload route
