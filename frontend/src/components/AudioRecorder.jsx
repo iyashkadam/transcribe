@@ -28,7 +28,7 @@ const AudioRecorder = ({ onRecordingComplete }) => {
 
         try {
           const uploadResponse = await axios.post(
-            "http://localhost:5000/upload/upload",
+            "https://transcribe-7nrf.onrender.com/upload/upload",
             formData,
             { headers: { "Content-Type": "multipart/form-data" } }
           );
@@ -36,7 +36,7 @@ const AudioRecorder = ({ onRecordingComplete }) => {
           const fileUrl = uploadResponse.data.file_url;
 
           const transcribeResponse = await axios.post(
-            "http://localhost:5000/transcription/transcribe",
+            "https://transcribe-7nrf.onrender.com/transcription/transcribe",
             { audio_url: fileUrl, filename: file.name }
           );
 
